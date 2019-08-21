@@ -1,14 +1,9 @@
 defmodule LiveViewCounterWeb.CounterLive do
   use Phoenix.LiveView
+  alias LiveViewCounterWeb.CounterView
 
   def render(assigns) do
-    ~L"""
-    <div>
-      <h1>The count is: <%= @val %></h1>
-      <button phx-click="dec">-</button>
-      <button phx-click="inc">+</button>
-    </div>
-    """
+    CounterView.render("index.html", assigns)
   end
 
   def mount(_session, socket) do

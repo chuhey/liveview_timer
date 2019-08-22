@@ -9,7 +9,7 @@ use Mix.Config
 
 # Configures the endpoint
 config :live_view_counter, LiveViewCounterWeb.Endpoint,
-  url: [host: "localhost"],
+  url: [host: "127.0.0.1"],
   secret_key_base: "fbVXRM6m2JPtYpi0aRcXyAurqqv+7VTQAMoWCR8qkb/5WWUy7CGoAs210/Hr+5/q",
   render_errors: [view: LiveViewCounterWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: LiveViewCounter.PubSub, adapter: Phoenix.PubSub.PG2],

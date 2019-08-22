@@ -7,15 +7,6 @@
 # General application configuration
 use Mix.Config
 
-config :live_view_counter,
-  ecto_repos: [LiveViewCounter.Repo]
-  
-config :live_view_counter, LiveViewCounter.Repo,
-  database: "live_view_counter_repo",
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost"
-  
 # Configures the endpoint
 config :live_view_counter, LiveViewCounterWeb.Endpoint,
   url: [host: "localhost"],

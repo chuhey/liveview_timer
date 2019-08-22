@@ -8,8 +8,6 @@ defmodule LiveViewCounter.Application do
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
-      # Start the Ecto repository
-      LiveViewCounter.Repo,
       # Start the endpoint when the application starts
       LiveViewCounterWeb.Endpoint
       # Starts a worker by calling: LiveViewCounter.Worker.start_link(arg)

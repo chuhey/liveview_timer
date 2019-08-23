@@ -11,7 +11,7 @@ use Mix.Config
 # before starting your production server.
 config :live_view_counter, LiveViewCounterWeb.Endpoint,
   http: [:inet6, port: System.get_env("PORT") || 4000],
-  url: [host: "example.com", port: 80],
+  url: [host: "hotpink-repulsive-atlanticblackgoby.gigalixirapp.com", port: System.get_env("PORT") || 4000],
   cache_static_manifest: "priv/static/cache_manifest.json"
 
 # Do not print debug messages in production

@@ -5,7 +5,7 @@ on: push
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-16.04
 
     container:
       image: elixir:1.9.1-slim
@@ -16,6 +16,6 @@ jobs:
       run: |
         mix local.rebar --force
         mix local.hex --force
-        mix deps.get --no-deps-check
+        mix deps.get
     - name: Run Tests
       run: mix test

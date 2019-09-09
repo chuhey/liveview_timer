@@ -5,7 +5,7 @@ on: push
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     container:
       image: elixir:1.9.1-slim
@@ -14,7 +14,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install Dependencies
       run: |
-        git --help
+        echo $PATH
         mix local.rebar --force
         mix local.hex --force
         mix deps.get

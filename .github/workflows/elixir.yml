@@ -5,7 +5,7 @@ on: push
 jobs:
   build:
 
-    runs-on: macOS-latest
+    runs-on: windows-latest
 
     container:
       image: elixir:1.9.1-slim

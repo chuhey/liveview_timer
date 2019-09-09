@@ -17,21 +17,10 @@ defmodule LiveViewCounter.DataCase do
   using do
     quote do
       alias LiveViewCounter.Repo
-
-      import Ecto
-      import Ecto.Changeset
-      import Ecto.Query
-      import LiveViewCounter.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(LiveViewCounter.Repo)
-
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(LiveViewCounter.Repo, {:shared, self()})
-    end
-
     :ok
   end
 

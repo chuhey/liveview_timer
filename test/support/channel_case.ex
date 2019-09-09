@@ -26,12 +26,6 @@ defmodule LiveViewCounterWeb.ChannelCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(LiveViewCounter.Repo)
-
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(LiveViewCounter.Repo, {:shared, self()})
-    end
-
     :ok
   end
 end
